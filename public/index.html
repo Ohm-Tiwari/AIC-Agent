@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Art Assistant</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="app">
+    <header>
+      <h1>🦁 Art Institute of Chicago</h1>
+      <p>Ask me anything about the collection</p>
+    </header>
+
+    <div id="chat-window">
+      <div id="suggestions">
+        <button class="suggestion" data-prompt="Show me Monet's water lilies">Show me Monet's water lilies</button>
+        <button class="suggestion" data-prompt="What Picasso works do you have?">What Picasso works do you have?</button>
+        <button class="suggestion" data-prompt="What exhibitions are currently on?">Current exhibitions</button>
+      </div>
+    </div>
+
+    <div id="input-area">
+      <input type="text" id="user-input" placeholder="Ask about an artist, artwork, or style..." />
+      <button id="send-btn">Send</button>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

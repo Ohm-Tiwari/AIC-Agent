@@ -1,0 +1,125 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+  font-family: Georgia, serif;
+  background: #1a1a1a;
+  color: #f0ebe0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#app {
+  width: 100%;
+  max-width: 720px;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 24px;
+}
+
+header h1 { font-size: 1.4rem; }
+header p  { font-size: 0.85rem; opacity: 0.6; margin-top: 4px; }
+
+#chat-window {
+  flex: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding-right: 8px;
+}
+
+#suggestions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 8px 0;
+}
+
+.suggestion {
+  background: #2c2c2c;
+  border: 1px solid #3a3a3a;
+  color: #f0ebe0;
+  padding: 8px 14px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-family: Georgia, serif;
+  cursor: pointer;
+  transition: border-color 0.15s;
+}
+
+.suggestion:hover {
+  border-color: #B50938;
+}
+
+.message {
+  max-width: 85%;
+  padding: 12px 16px;
+  border-radius: 12px;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+.message.user {
+  align-self: flex-end;
+  background: #B50938;
+  color: #fff;
+  white-space: pre-wrap;
+}
+
+.message.agent {
+  align-self: flex-start;
+  background: #2c2c2c;
+  border: 1px solid #3a3a3a;
+}
+
+.message.agent p { margin: 0 0 0.5em; }
+.message.agent p:last-child { margin-bottom: 0; }
+.message.agent ul,
+.message.agent ol { padding-left: 1.4em; margin: 0.4em 0; }
+.message.agent li { margin-bottom: 0.25em; }
+.message.agent strong { color: #fff; }
+
+.message.thinking {
+  align-self: flex-start;
+  opacity: 0.5;
+  font-style: italic;
+  font-size: 0.85rem;
+}
+
+#input-area {
+  display: flex;
+  gap: 10px;
+}
+
+#user-input {
+  flex: 1;
+  padding: 12px 16px;
+  border-radius: 8px;
+  border: 1px solid #3a3a3a;
+  background: #2c2c2c;
+  color: #f0ebe0;
+  font-size: 0.95rem;
+  font-family: Georgia, serif;
+}
+
+#send-btn {
+  padding: 12px 20px;
+  border-radius: 8px;
+  border: none;
+  background: #B50938;
+  color: white;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: background 0.15s;
+}
+
+#send-btn:hover { background: #8f0029; }
+#send-btn:disabled { opacity: 0.5; cursor: not-allowed; }
